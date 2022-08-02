@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    transition: background .3s;
+}
+
+body.dark {
+    background: rgb(41, 41, 41);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.modeBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__container {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__btnBox {
+        position: relative;
+        width: 100px;
+        height: 48px;
+        border-radius: 2rem;
+        background: rgb(41, 41, 41);
+        box-shadow: 0 1px 8px rgb(41, 41, 41, .76);
+        transition: background .3s;
+    }
+    &__btn {
+        position: absolute;
+        display: block;
+        left: 4.5px;
+        width: 40px;
+        height: 40px;
+        top: .23rem;
+        border-radius: 2rem;
+        background: white;
+        cursor: pointer;
+
+        transition: left .3s, background .3s;
+    }
+
+    &__btn.active {
+        left: 56px;
+        background: rgb(41, 41, 41);
+    }
+    &__btnBox.active {
+        background: white;
+    }
+
+}
+
